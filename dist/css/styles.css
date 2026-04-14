@@ -1,51 +1,54 @@
 /* ===========================
     Global Styles
 =========================== */
+
 body {
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 100px; /* Adjust for fixed navbar */
 }
 
-/* Typography */
-h2 {
-  font-weight: 700;
-  font-size: 2.5rem;
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-h3 {
-  font-weight: 600;
-}
-
-p, .text-muted {
-  color: #555; /* Softer text color */
-  font-size: 1.1rem;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.navbar-nav .nav-link {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;   
+  margin-right: 2.5rem;
+  letter-spacing: 1px; 
+  color: black; 
 }
 
 /* ===========================
-    Navbar
+    Responsive Navbar Adjustments
 =========================== */
-/* Navbar Link Styling */
-.navbar-nav .nav-link {
-  font-size: 1.6rem;         /* Bigger font */
-  margin-right: 1.6rem;      /* More spacing between links */
-  letter-spacing: 0.8px;     /* Optional: subtle spacing between letters */
+
+/* Triggers when screen is smaller than 1200px (Laptops/Tablets) */
+@media (max-width: 1200px) {
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;       /* Shrink font slightly */
+    margin-right: 1.5rem;    /* Reduce space between links */
+    letter-spacing: 0.5px;   /* Reduce letter spacing */
+  }
 }
 
-.navbar-brand {
-  font-weight: bold;
+/* Triggers when screen is smaller than 992px (Standard Tablets) */
+/* This is usually where the mobile "Hamburger" menu appears in Bootstrap */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;       /* Even smaller for mobile menu */
+    margin-right: 0;         /* Remove right margin so they stack neatly */
+    margin-bottom: 0.5rem;   /* Add bottom margin for vertical spacing */
+    text-align: center;      /* Optional: Center text in the mobile menu */
+  }
 }
 
 /* ===========================
     Hero Section
 =========================== */
 .hero-section {
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
 }
@@ -53,12 +56,12 @@ p, .text-muted {
 .hero-section img {
   object-fit: cover;
   object-position: center;
-  height: 100%;
+  height: 60%;
 }
 
 .hero-gradient {
   position: relative;
-  height: 90vh;
+  height: 75vh;
   overflow: hidden;
   background: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.8) 20%, transparent 80%);
 }
@@ -73,7 +76,7 @@ p, .text-muted {
   top: 0;
   right: 0;
   width: 110%;
-  height: 90vh;
+  height: 75vh;
   background-image: url('/dist/assets/img/portfolio/fullsize/iPSC-RGC sphere.jpg');
   background-size: cover;
   background-position: center;
@@ -86,7 +89,7 @@ p, .text-muted {
 .welcome-text-container {
   z-index: 1;
   padding: 2rem;
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -140,20 +143,20 @@ p, .text-muted {
 }
 
 .card .row {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .research-description {
   font-size: 1.1rem;
-  max-width: 900px;
+  max-width: 400px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
 .section-title {
-  font-size: 1.9rem; /* Bigger */
-  font-weight: 700;
+  font-size: 1.9rem; 
+  font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: #222; /* Even darker for emphasis */
@@ -168,10 +171,11 @@ p, .text-muted {
 /* Images */
 .img-fluid {
   max-height: 400px;
+  max-width: 400px;
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768) {
   .img-fluid {
     max-height: 200px;
   }
@@ -181,7 +185,7 @@ p, .text-muted {
 hr {
   margin: 3rem 0;
   border: none;
-  border-top: 2px solid #eee;
+  border-top: 3px solid #eee;
 }
 
 /* Image Overlay (if used elsewhere) */
