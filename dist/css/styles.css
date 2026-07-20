@@ -131,6 +131,18 @@ h1, h2, h3, h4 {
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
+/* Standardized team/profile headshots (team.html).
+   Fixed box + object-fit so every photo displays at the same
+   size regardless of its original dimensions. Takes precedence
+   over the general .img-fluid max-height/max-width rule below
+   since width/height are explicit rather than max-*. */
+.profile-img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+}
+
 /* ===========================
     Research Section
 =========================== */
